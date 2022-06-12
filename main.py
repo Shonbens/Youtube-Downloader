@@ -46,7 +46,7 @@ link_label = Label(screen, text='Enter Video Link:', font=('Comic Sans MS', 40),
 
 # Select Location for the video
 path_label = Label(screen, text='Select Path', font=('Comic Sans MS', 30), fg='black', bg='white')
-select_btn = Button(screen, text='Select', font=('Comic Sans MS', 15), fg='black', bg='white', bd=0,
+select_btn = Button(screen, text='Select', font=('Comic Sans MS', 15), fg='green', bd=1,
                     command=path_selector)
 
 # Add to screen
@@ -58,9 +58,11 @@ canvas.create_window(250, 170, window=link_label)
 canvas.create_window(250, 230, window=link_field)
 
 # Download buttons
-download_btn = Button(screen, text='Download!', font=('Comic Sans MS', 20), fg='black', bg='white', bd=0,
-                      command=File_Downloader)
-# add to canvas
-canvas.create_window(250, 420, window=download_btn)
+download_btn = Button(screen, text='Download!', font=('Comic Sans MS', 20), fg='red', bd=1, command=File_Downloader)
+canvas.create_window(250, 410, window=download_btn)
+
+#Made By
+made_by = Label(screen, text='Made by: Shon Ben Shimon', font=('Comic Sans MS', 15), fg='black', bg='white')
+canvas.create_window(100, 480, window=made_by)
 
 screen.mainloop()
